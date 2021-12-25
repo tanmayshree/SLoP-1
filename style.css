@@ -1,36 +1,207 @@
 body{
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 0;
     padding: 0;
 }
 
-ul{
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    background-color: #fff;
-    top: 0;
-    width: 100%;
+.hidebar{
+    visibility: hidden;
 }
-.menubar{
-    display: flex;
-    float: right;
-    position: relative;
-    height: 60px;
+.nav-container{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto 100px 100px 100px;
+    height: 70px;
+    line-height: 50px;
+    column-gap: 20px;
+    padding: 1px;
+    margin: 2px 10px;
+    
 }
-.navtext{
-    border-left: solid rgba(0, 0, 0, 0.24) 1px;
+
+.nav-links{
+    border-left: solid rgba(0, 0, 0, 0.1) 1px;
     padding: 10px;
     width: 100px;
     text-align: center;
     text-decoration: none;
     transform: translate(-50%-50%);
+    align-items: center;
+    font-size: 16px;
+    word-spacing: 0;
+    cursor: pointer;
+    
 }
-.card{
-    width: 40%;
+.nav-links:hover, .links:hover{
+    background: rgba(0, 0, 0, 0.03);
+    color: black;
 }
-.card img{
-    width: 70%;
+.links{
+    text-decoration: none;
+}
+
+.empty{
+    border: none;
+}
+
+header{
+    background-color: rgb(248, 246, 246);
+    text-align: center;
+    padding: 35px 20%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-title{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.page-desc{
+    font-weight: normal;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.527);
+}
+.content-box{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    justify-content: center;
+    background-color: rgb(248, 246, 246);
+}
+
+.card-container{
+    padding: 25px;
+    background-color: white;
+    margin: 15px;
+    text-align: center;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+}
+
+.card-container:hover{
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.30);
+    cursor: pointer;
+}
+.card-img{
+    width: 90%;
+    padding: 5%;
+}
+.card-title,.card-desc{
+    padding: 5px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.card-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.card-desc{
+    font-size: 14px;
+}
+
+.lower{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: center;
+    padding: 0px 5px;
+    column-gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.lower-container{
+    display: grid;
+    justify-content: center;
+    
+    margin: 50px 0;
+    padding-bottom: 50px;
+}
+.lower-image{
+    padding: 20px 20%;
+    width: 60%;
+    height: 180px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.lower-title,.lower-desc{
+    text-align: center;
+    padding: 8px;
+}
+.lower-title{
+    font-weight: 600;
+    font-size: 110%;
+}
+.lower-desc{
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#subscribe{
+    width: 220px;
+    margin: 10px auto;
+    height: 40px;
+    border-radius: 5px;
+    border: solid #d6d0d0 1px;
+    padding: 0 10px;
+}
+button{
+    width: 90px;
+    height: 30px;
+    margin:5px  auto;
+    color: royalblue;
+    cursor: pointer;
+    background-color: white;
+    border: solid #d6d0d0 1px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover{
+    color: white;
+    background-color: royalblue;
+}
+
+.last{
+    text-align: center;
+    margin: 20px;
+    padding: 100px auto;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+}
+.last-content{
+    float: right;
+    padding: 0 10px;
+    font-size: 75%;
+}
+
+@media (min-width:1080px){
+    .content-box{
+        grid-template-columns: 35% 35%;
+    }
+}
+@media (max-width:760px){
+    .content-box{
+        grid-template-columns: 60%;
+    }
+}
+@media (max-width:600px){
+    .content-box,.lower{
+        grid-template-columns: 95%;
+    }
+    .lower-container{
+        padding: 0;
+    }
+    .empty{
+        display: none;
+    }
+    .nav-container{
+        grid-template-columns: 100px 100px 100px;
+        justify-content: center;
+    }
+    header{
+        padding: 24px;
+    }
+    .page-title{
+        font-size: 2.5rem;
+    }
+    .page-desc{
+        font-size: 1em;
+    }
 }
